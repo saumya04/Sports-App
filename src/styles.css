@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "css/bootstrap-4.0.0-alpha.6.css";
+
+/* Fonts */
+@import "css/fonts/open-sans-font.css";
+
+@import "css/custom.css";
