@@ -5,4 +5,5 @@
 /* Fonts */
 @import "css/fonts/open-sans-font.css";
 
+@import "css/common.css";
 @import "css/custom.css";
