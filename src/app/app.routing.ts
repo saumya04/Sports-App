@@ -18,8 +18,11 @@ export const routes: Routes = [
 	},
 	{
 		path: 'players',
-		component: PlayersComponent,
 		children: [
+			{
+				path: '',
+				component: PlayersComponent
+			},
 			{
 				path: ':id',
 				component: PlayerDetailsComponent

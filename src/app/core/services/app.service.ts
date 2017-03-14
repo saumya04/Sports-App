@@ -23,7 +23,7 @@ export class AppService {
 	}
 
 	getPlayers() {
-		return this.players;
+		return this.storage.get('players');
 	}
 
 	deletePlayer(id: string) {
@@ -36,6 +36,38 @@ export class AppService {
 			}
 		);
 
+		this.updatePlayers();
+	}
+
+	getPlayerDetails(id: string) {
+		let returnVal = null;
+
+		this.players = this.players.map(
+			(element, index) => {
+				console.log(element);
+				if(element.id == id) {
+					returnVal = element;
+				}
+			}
+		);
+
+		return returnVal;
+	}
+
+	editPlayerDetails(data) {
+		let players = this.getPlayers();
+
+		if(data && data.hasOwnProperty('id')) {
+			if(players) {
+				for(let key in players) {
+					if(players[key].id == data.id) {
+						players[key].name = data.name;
+					}
+				}
+			}
+		}
+
+		this.players = players;
 		this.updatePlayers();
 	}
 
