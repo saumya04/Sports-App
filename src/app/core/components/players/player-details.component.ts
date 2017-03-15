@@ -4,7 +4,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router' ;
 
 @Component({
-	templateUrl: 'player-details.component.html'
+	templateUrl: './player-details.component.html'
 })
 
 export class PlayerDetailsComponent implements OnInit {
