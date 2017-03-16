@@ -20,7 +20,8 @@
       "mobile": false,
       "universal": true,
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/font-awesome/css/font-awesome.css"
       ],
       "scripts": [],
       "environments": {
